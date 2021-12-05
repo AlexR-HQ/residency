@@ -36,7 +36,7 @@
     <script src="{{ asset('js/core/popper.min.js') }}"></script>
     <script src="{{ asset('js/core/bootstrap-material-design.min.js') }}"></script>
     <script src="{{ asset('js/plugins/perfect-scrollbar.jquery.min.js') }}"></script>
-    {{-- <!-- Plugin for the momentJs  -->
+    <!-- Plugin for the momentJs  -->
     <script src="{{ asset('js/plugins/moment.min.js') }}"></script>
     <!--  Plugin for Sweet Alert -->
     <script src="{{ asset('js/plugins/sweetalert2.js') }}"></script>
@@ -69,7 +69,7 @@
     <!--  Notifications Plugin    -->
     <script src="{{ asset('js/plugins/bootstrap-notify.js') }}"></script>
     <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="{{ asset('js/material-dashboard.js?v=2.1.1') }}" type="text/javascript"></script> --}}
+    <script src="{{ asset('js/material-dashboard.js?v=2.1.1') }}" type="text/javascript"></script>
     @stack('js')
 </body>
 

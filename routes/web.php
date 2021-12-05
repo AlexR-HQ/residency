@@ -20,4 +20,5 @@ Route::get('/', function () {
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/users/create', [App\Http\Controllers\UserController::class, 'create']);
 
