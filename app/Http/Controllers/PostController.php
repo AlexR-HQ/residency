@@ -94,7 +94,7 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        abort_if(Gate::denies('post_delete'), 403);
+        // abort_if(Gate::denies('post_delete'), 403);
 
         $post->delete();
 

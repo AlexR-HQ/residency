@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\AnimalController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,10 +37,15 @@ Route::group(['middleware' => 'auth'], function () {
     Route::put('/users/{user}', [App\Http\Controllers\UserController::class, 'update'])->name('users.update');
     // eliminar usuario
     Route::delete('/users/{user}', [App\Http\Controllers\UserController::class, 'destroy'])->name('users.delete');
-
     Route::resource('posts', App\Http\Controllers\PostController::class);
-    Route::resource('motorcycles', App\Http\Controllers\MotorcycleController::class);
-
     Route::resource('permissions', App\Http\Controllers\PermissionController::class);
     Route::resource('roles', App\Http\Controllers\RoleController::class);
 });
+
+//rutas para el controlador Animal
+Route::get('animal', [AnimalController::class, 'index'])->name('animal.index');
+Route::post('animal', [AnimalController::class, 'registrar'])->name('animal.registrar');
+Route::get('animal/eliminar/{id}', [AnimalController::class, 'eliminar'])->name('animal.eliminar');
+Route::get('animal/editar/{id}', [AnimalController::class, 'editar'])->name('animal.editar');
+Route::post('animal/actualizar', [AnimalController::class, 'actualizar'])->name('animal.actualizar');
+

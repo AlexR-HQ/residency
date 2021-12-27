@@ -74,10 +74,10 @@
                     </a>
                 </li>
             @endcan
-            <li class="nav-item{{ $activePage == 'notifications' ? ' active' : '' }}">
-                <a class="nav-link" href="#">
+            <li class="nav-item{{ $activePage == 'animal' ? ' active' : '' }}">
+                <a class="nav-link" href="{{ route('animal.index') }}">
                     <i class="material-icons">notifications</i>
-                    <p>{{ __('Notifications') }}</p>
+                    <p>{{ __('Animals') }}</p>
                 </a>
             </li>
             <li class="nav-item{{ $activePage == 'language' ? ' active' : '' }}">
